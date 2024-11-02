@@ -1,0 +1,24 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Trading" in the menu.
+    commands:
+      - command: hover-text
+        text: Trading
+        description: menu item in the header
+        action: click
+  - prompt: Assert that trading resources or tutorials are accessible.
+    commands:
+      - command: assert
+        expect: Start Learning button is visible
+  - prompt: Attempt to view a trading tutorial or article.
+    commands:
+      - command: hover-text
+        text: Start Learning
+        description: button for accessing trading tutorials
+        action: click
+  - prompt: >-
+      Assert that the content is informative and loads without issues.  # Use
+      the content of the file from the environment
+    commands:
+      - command: assert
+        expect: School of Pipsology content is visible and informative
