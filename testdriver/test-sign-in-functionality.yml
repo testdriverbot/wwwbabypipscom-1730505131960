@@ -1,0 +1,38 @@
+version: 4.0.79
+steps:
+  - prompt: Click the "Sign In" link.
+    commands:
+      - command: hover-text
+        text: Sign In
+        description: link in the header
+        action: click
+  - prompt: Assert that a sign-in form appears.
+    commands:
+      - command: assert
+        expect: >-
+          the sign-in form with fields for Email or Username and Password is
+          visible
+  - prompt: Attempt to sign in with test credentials.
+    commands:
+      - command: hover-text
+        text: Email or Username
+        description: email input field
+        action: click
+      - command: type
+        text: test@example.com
+      - command: hover-text
+        text: Password
+        description: password input field
+        action: click
+      - command: type
+        text: password123
+      - command: hover-text
+        text: SIGN IN
+        description: sign in button
+        action: click
+  - prompt: >-
+      Assert that a user dashboard or welcome message is displayed.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: the user dashboard or welcome message is visible
