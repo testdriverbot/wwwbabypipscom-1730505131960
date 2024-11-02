@@ -1,0 +1,66 @@
+version: 4.0.79
+steps:
+  - prompt: Click the "Join" button.
+    commands:
+      - command: hover-text
+        text: Join
+        description: Join button in the header
+        action: click
+  - prompt: Assert that a registration form is displayed.
+    commands:
+      - command: assert
+        expect: the registration form with Email and Password fields is displayed
+  - prompt: Complete the registration with test data.
+    commands:
+      - command: hover-text
+        text: Email
+        description: Email field in the registration form
+        action: click
+      - command: type
+        text: test@example.com
+      - command: hover-text
+        text: Password
+        description: Password field in the registration form
+        action: click
+      - command: type
+        text: TestPassword123
+      - command: hover-text
+        text: JOIN NOW
+        description: Join Now button in the registration form
+        action: click
+  - prompt: Complete the registration with test data.
+    commands:
+      - command: hover-text
+        text: Email
+        description: Email field in the registration form
+        action: click
+      - command: type
+        text: newtest@example.com
+      - command: hover-text
+        text: Password
+        description: Password field in the registration form
+        action: click
+      - command: type
+        text: NewTestPassword123
+      - command: hover-text
+        text: JOIN NOW
+        description: Join Now button in the registration form
+        action: click
+  - prompt: Complete the registration with test data.
+    commands:
+      - command: hover-text
+        text: Email
+        description: Email field in the registration form
+        action: click
+      - command: type
+        text: newtest@example.com
+      - command: hover-text
+        text: Password
+        description: Password field in the registration form
+        action: click
+      - command: type
+        text: NewTestPassword123
+      - command: hover-text
+        text: JOIN NOW
+        description: Join Now button in the registration form
+        action: click
