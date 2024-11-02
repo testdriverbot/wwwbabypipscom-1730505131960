@@ -1,0 +1,30 @@
+version: 4.0.79
+steps:
+  - prompt: Click on the currency correlation calculator link in the banner.
+    commands:
+      - command: hover-text
+        text: Currency Correlation Calculator
+        description: link in the banner
+        action: click
+  - prompt: Assert that the calculator loads and is interactive.
+    commands:
+      - command: assert
+        expect: the calculator is interactive and visible
+  - prompt: Perform a correlation calculation with test data.
+    commands:
+      - command: hover-text
+        text: 30D
+        description: button for 30-day correlation calculation
+        action: click
+  - prompt: Perform a correlation calculation with test data.
+    commands:
+      - command: hover-text
+        text: Calculate
+        description: button to execute the correlation calculation
+        action: click
+  - prompt: Perform a correlation calculation with test data.
+    commands:
+      - command: hover-text
+        text: Calculate
+        description: button to perform the correlation calculation
+        action: click
