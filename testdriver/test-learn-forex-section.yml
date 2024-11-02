@@ -1,0 +1,34 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Learn Forex" in the menu.
+    commands:
+      - command: hover-text
+        text: Learn Forex
+        description: menu item in the header
+        action: click
+  - prompt: Assert that educational content or courses are available.
+    commands:
+      - command: assert
+        expect: educational content or courses are available
+  - prompt: Select a beginner course to start.
+    commands:
+      - command: hover-text
+        text: Start Course
+        description: button to start a beginner course
+        action: click
+  - prompt: Select a beginner course to start.
+    commands:
+      - command: hover-text
+        text: Start Course
+        description: button to start a beginner course
+        action: click
+  - prompt: Select a beginner course to start.
+    commands:
+      - command: press-keys
+        keys:
+          - alt
+          - left
+      - command: hover-text
+        text: Start Course
+        description: button to start a beginner course
+        action: click
